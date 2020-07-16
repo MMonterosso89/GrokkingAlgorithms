@@ -1,0 +1,98 @@
+---
+title: "Untitled"
+author: "Matthew Monterosso"
+date: "7/15/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+
+
+knitr::opts_chunk$set(echo = TRUE)
+
+library(reticulate)
+
+library(tidyverse)
+```
+
+#Grokking Algorithms Book by Aditya Y. Bhargava
+
+
+# Python and R follow along by Matthew Monterosso
+
+
+# Binary Search algorithm
+
+
+## Python Implementation of Binary Search as instructed in the book. 
+## NOTE for python 3.x you need // for integer division and print now requires parenthesis 
+
+```{python}
+
+def binary_search(list, item):
+
+  low = 0
+  high = len(list) - 1
+  
+  while low <= high:
+    mid = (low + high) // 2
+    guess = list[mid]
+    if guess == item:
+      return mid
+    if guess > item:
+      high = mid - 1
+    else:
+      low = mid + 1
+  return None
+
+my_list = [1,3,5,7,9]
+
+
+
+print(binary_search(my_list, 9))
+
+
+#print(binary_search(my_list, -1))
+
+
+
+
+```
+
+## R implementation of Binary Search
+
+```{r}
+
+binary_search <- function(vect, num){
+  browser()
+  low <- 0
+  high <- length(vect) - 1
+  
+  while (low <= high) {
+    mid <- (low + high) %/% 2
+    guess <- vect[mid]
+    
+    if (guess == num) {
+      return(mid)
+    }
+    if (guess > num) {
+      high <- mid - 1
+    }
+    else {
+      low <- mid + 1
+    }
+    
+  }
+  return("None")
+  
+}
+
+
+vect = c(1,3,5,7,9)
+
+binary_search(vect,1)
+
+
+```
+
+
