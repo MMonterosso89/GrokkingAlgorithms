@@ -25,7 +25,7 @@ library(tidyverse)
 
 
 ## Python Implementation of Binary Search as instructed in the book. 
-## NOTE for python 3.x you need // for integer division and print now requires parenthesis 
+## NOTE for python 3.x you need // for integer division and print now requires parentheses 
 
 ```{python}
 
